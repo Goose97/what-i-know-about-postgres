@@ -10,3 +10,4 @@
 6.1. [Btree index](btree_index.md)    
 6.2. [Nhược điểm của index](cost_of_index.md)    
 6.3. [Một số tips khi làm việc với index](index_tips.md)    
+7. [WAL](wal.md)
