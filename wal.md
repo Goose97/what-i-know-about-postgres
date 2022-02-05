@@ -37,6 +37,7 @@ Một số config mình đã đề cập ở phần trên như `wal_buffers`, `c
     4. Application nhận được tín hiệu thành công và tiếp tục chạy
     5. Postgres crash, những thay đổi của transaction trên không kịp ghi xuống WAL
     6. Khi Postgres khởi động lại, những thay đổi này sẽ coi như mất vì không hề tồn tại trên WAL
+
   synchronous_commit đưa ra cho bạn một trade-off, nó tăng đáng kể write performance với cái giả phải trả là tỉ lệ mất dữ liệu nhỏ. Đối với những bảng dữ liệu không quá quan trọng (ví dụ như thống kê hay bảng log) hoặc có thể khởi tạo lại được, synchronous_commit là một cấu hình bạn nên cân nhắc.
 Ngoài ra, khi tạo bảng trong Postgres, bạn có thể chỉ định bỏ qua WAL khi thao tác với bảng này:
 ```sql
